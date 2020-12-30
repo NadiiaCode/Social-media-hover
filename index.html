@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social media hover</title>
+
+    <script
+      src="https://kit.fontawesome.com/25bc89a4e6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="unicornhover">
+        <img src="unicorn.jpg" />
+        <div class="overlay">
+          <h2>Social Media</h2>
+          <div class="social">
+            <p class="group1">
+              <a
+                href="https://www.instagram.com/my_financial_blog/"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCvuuBlB_8kq6NKeQH2M0-WA?view_as=subscriber"
+                target="_blank"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </p>
+            <hr />
+            <hr />
+            <p class="group2">
+              <a href="https://my-financial-wealth.com/" target="_blank">
+                <i class="fab fa-wordpress"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nadiia-g-54664816b/"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Langar&display=swap");
+      body {
+        font-family: "Langar", cursive;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .container {
+        font-family: "Langar", cursive;
+        width: 440px;
+        height: 530px;
+        padding-top: 10px;
+        margin: auto;
+        display: block;
+        letter-spacing: 5px;
+      }
+
+      .unicornhover {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        float: left;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0px 0px 30px -5px #bc84fc;
+      }
+
+      .unicornhover .overlay {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        overflow: hidden;
+      }
+
+      .unicornhover img {
+        position: relative;
+        display: block;
+        transform: scale(1.03);
+        transition: all 0.5s;
+      }
+
+      .unicornhover:hover img {
+        transform: scale(1);
+        filter: brightness(0.85);
+      }
+
+      .unicornhover h2 {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        color: #373812;
+        -webkit-text-stroke: 1px #ffffff;
+      }
+
+      .unicornhover:hover h2 {
+        opacity: 0;
+        transform: translate3d(-50%, -50%, 0) scale3d(0.9, 0.9, 1);
+      }
+
+      .unicornhover .social {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: rotate(-45deg);
+      }
+
+      .unicornhover hr {
+        width: 50%;
+        opacity: 0;
+        height: 1px;
+      }
+
+      .unicornhover hr:nth-child(2) {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg) scale3d(0, 0, 1);
+      }
+
+      .unicornhover hr:nth-child(3) {
+        transform: translate3d(-50%, -50%, 0) rotate(90deg) scale3d(0, 0, 1);
+      }
+
+      .unicornhover h2,
+      .unicornhover hr {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        margin: 0px;
+        background-color: transparent;
+        transform-origin: 50%;
+        transition: opacity 0.5s, transform 0.5s;
+        transform: translate3d(-50%, -50%, 0);
+      }
+
+      .group1,
+      .group2 {
+        left: 50%;
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        background-color: transparent;
+        transform-origin: 50%;
+        transition: opacity 0.5s, transform 0.5s;
+        transform: translate3d(-50%, -50%, 0);
+      }
+
+      .group1 {
+        top: 43%;
+      }
+
+      .group2 {
+        top: 58%;
+      }
+
+      .unicornhover p a {
+        color: #ffd9d9;
+      }
+
+      .unicornhover p a:hover,
+      .unicornhover p a:focus {
+        opacity: 0.9;
+      }
+
+      .unicornhover a i {
+        padding: 10px;
+        font-size: 50px;
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
+      }
+
+      .group1 a:first-child i {
+        transform: translate3d(-60px, -60px, 0) rotate(45deg) scale(2);
+      }
+
+      .group1 a:nth-child(2) i {
+        transform: translate3d(60px, -60px, 0) rotate(45deg) scale(2);
+      }
+
+      .group2 a:first-child i {
+        transform: translate3d(-60px, 60px, 0) rotate(45deg) scale(2);
+      }
+
+      .group2 a:nth-child(2) i {
+        transform: translate3d(60px, 60px, 0) rotate(45deg) scale(2);
+      }
+
+      .unicornhover:hover hr:nth-child(2) {
+        opacity: 1;
+
+        transform: translate3d(-50%, -50%, 0) rotate(0deg) scale3d(1, 1, 1);
+      }
+
+      .unicornhover:hover hr:nth-child(3) {
+        opacity: 1;
+
+        transform: translate3d(-50%, -50%, 0) rotate(90deg) scale3d(1, 1, 1);
+      }
+
+      .unicornhover:hover .group1 i:empty,
+      .unicornhover:hover .group2 i:empty {
+        transform: translate3d(0, 0, 0) rotate(45deg) scale(1);
+        opacity: 1;
+      }
+    </style>
+  </body>
+</html>
